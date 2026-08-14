@@ -1,0 +1,307 @@
+{
+  "nav": {
+    "howItWorks": "How It Works",
+    "services": "Services",
+    "pricing": "Pricing",
+    "forYourBusiness": "For Your Business",
+    "faq": "FAQ",
+    "startFreeCheck": "Start Free Business Check"
+  },
+  "hero": {
+    "headline1": "Every Business Has a Story.",
+    "headline2": "Every Story Has Opportunities.",
+    "supportingCopy": "SBMC understands your business, finds what may be holding it back, and builds the right solution—without forcing unnecessary services.",
+    "primaryCTA": "Start Your Free Business Check",
+    "secondaryCTA": "View Services & Prices",
+    "trustLine": "Personalised sample • Clear pricing • No pressure to continue"
+  },
+  "positioning": {
+    "heading": "Built by a Business Owner, for Business Owners.",
+    "copy": "Business owners should not have to buy random marketing services and hope something works.\n\nSBMC begins by understanding the business, its customers, location, current presentation, and biggest challenge. We then recommend a practical starting point the owner can clearly understand."
+  },
+  "method": {
+    "heading": "Understand. Analyze. Build. Grow.",
+    "steps": [
+      {
+        "title": "Understand",
+        "description": "We learn how your business works, who your customers are, and what you want to improve."
+      },
+      {
+        "title": "Analyze",
+        "description": "We identify the most important problem or opportunity affecting trust, visibility, communication, or enquiries."
+      },
+      {
+        "title": "Build",
+        "description": "We create the solution that your business genuinely needs instead of forcing a large package."
+      },
+      {
+        "title": "Grow",
+        "description": "We help transform separate marketing activities into a clearer and more consistent growth system."
+      }
+    ]
+  },
+  "businessTypes": {
+    "heading": "Solutions Built Around Your Type of Business",
+    "primary": "Primary",
+    "secondary": "More Business Types"
+  },
+  "problems": {
+    "heading": "We Do Not Start With Services.\nWe Start With Your Business Problem.",
+    "cards": [
+      {
+        "id": "need_more_enquiries",
+        "title": "I need more enquiries",
+        "likelySolution": "AI Business Report — ₹1,999"
+      },
+      {
+        "id": "not_professional_online",
+        "title": "My business does not look professional online",
+        "likelySolution": "Instagram Makeover — ₹999"
+      },
+      {
+        "id": "instagram_needs_improvement",
+        "title": "My Instagram needs improvement",
+        "likelySolution": "Instagram Makeover — ₹999"
+      },
+      {
+        "id": "not_found_on_google",
+        "title": "Customers cannot find me properly on Google",
+        "likelySolution": "Google Business Profile Fix — ₹999"
+      },
+      {
+        "id": "offers_not_attracting",
+        "title": "My offers are not attracting attention",
+        "likelySolution": "Offer Creation — ₹499"
+      },
+      {
+        "id": "whatsapp_unorganised",
+        "title": "My WhatsApp customer handling is unorganised",
+        "likelySolution": "WhatsApp Business Setup — ₹1,499"
+      },
+      {
+        "id": "dont_know_content",
+        "title": "I do not know what content to post",
+        "likelySolution": "Monthly Content Plan — ₹2,499"
+      },
+      {
+        "id": "need_website",
+        "title": "I need a website or landing page",
+        "likelySolution": "Business Landing Page — ₹4,999"
+      },
+      {
+        "id": "not_sure_whats_missing",
+        "title": "I am not sure what my business is missing",
+        "likelySolution": "AI Business Report — ₹1,999"
+      }
+    ]
+  },
+  "services": {
+    "heading": "Start With What Your Business Actually Needs",
+    "pricingNote": "Final scope is confirmed before work begins. Domain, hosting, paid advertising, third-party tools, and ongoing maintenance are separate unless explicitly included.",
+    "categories": {
+      "starter": "Starter Services",
+      "growth": "Growth Services",
+      "complete": "Complete Solutions"
+    }
+  },
+  "freeSample": {
+    "heading": "See the Quality Before You Decide",
+    "copy": "Complete the short business check and continue on WhatsApp. Based on your request, SBMC may prepare one personalised sample so you can evaluate the quality before deciding whether to continue.",
+    "clarification": "Full reports, complete websites, multi-design packages, strategy documents, and complete implementations are paid services unless explicitly offered.",
+    "cta": "Request My Free Sample"
+  },
+  "workExamples": {
+    "heading": "Selected Work and Sample Transformations",
+    "categories": [
+      "Beauty business creative",
+      "Coaching admission creative",
+      "Computer product creative",
+      "Offer poster",
+      "Instagram profile concept",
+      "Landing-page concept"
+    ]
+  },
+  "whySBMC": {
+    "heading": "Why Choose SBMC",
+    "cards": [
+      {
+        "title": "Personalised",
+        "description": "Every solution starts with the actual business, not a generic template."
+      },
+      {
+        "title": "Practical",
+        "description": "Recommendations are understandable and usable by the owner."
+      },
+      {
+        "title": "Transparent",
+        "description": "Starting prices and scope are clearly explained."
+      },
+      {
+        "title": "Low-Risk Start",
+        "description": "The business owner may see a personalised sample before deciding."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions"
+  },
+  "finalCTA": {
+    "heading": "Your Business May Not Need Everything.\nIt Needs the Right First Step.",
+    "copy": "Complete five simple questions and receive a personalised starting recommendation.",
+    "button": "Start Free Business Check"
+  },
+  "form": {
+    "progress": "Step {{current}} of 5",
+    "next": "Next",
+    "back": "Back",
+    "submit": "Get My Recommendation",
+    "submitting": "Generating your recommendation...",
+    "restart": "Start Again",
+    "edit": "Edit My Answers",
+    "steps": {
+      "1": {
+        "question": "What is your business name?",
+        "placeholder": "e.g., Gupta Beauty Parlour",
+        "validation": {
+          "required": "Business name is required",
+          "minLength": "Business name must be at least 2 characters",
+          "maxLength": "Business name must be less than 100 characters"
+        }
+      },
+      "2": {
+        "question": "What type of business do you run?",
+        "placeholder": "Select your business type",
+        "options": {
+          "beauty_parlour_salon": "Beauty Parlour and Salon",
+          "coaching_institute": "Coaching Institute",
+          "computer_laptop_shop": "Computer and Laptop Shop",
+          "gym_fitness_centre": "Gym and Fitness Centre",
+          "restaurant_cafe": "Restaurant and Café",
+          "clinic_healthcare": "Clinic and Healthcare Practice",
+          "real_estate": "Real Estate",
+          "boutique_fashion": "Boutique and Fashion Store",
+          "local_retail_service": "Local Retail or Service Business",
+          "other": "Other"
+        }
+      },
+      "3": {
+        "question": "Where is your business located?",
+        "placeholder": "Civil Lines, Prayagraj",
+        "validation": {
+          "required": "Location is required",
+          "minLength": "Location must be at least 2 characters",
+          "maxLength": "Location must be less than 100 characters"
+        }
+      },
+      "4": {
+        "question": "What is the biggest challenge in your business right now?",
+        "placeholder": "Select your biggest challenge",
+        "options": {
+          "need_more_enquiries": "I need more enquiries",
+          "not_professional_online": "My business does not look professional online",
+          "instagram_needs_improvement": "My Instagram needs improvement",
+          "not_found_on_google": "Customers cannot find me properly on Google",
+          "offers_not_attracting": "My offers are not attracting attention",
+          "whatsapp_unorganised": "My WhatsApp customer handling is unorganised",
+          "dont_know_content": "I do not know what content to post",
+          "need_website": "I need a website or landing page",
+          "not_sure_whats_missing": "I am not sure what my business is missing"
+        }
+      },
+      "5": {
+        "question": "Which WhatsApp number should we contact?",
+        "placeholder": "98765 43210",
+        "consent": "I agree that SBMC may use these details to continue this business enquiry on WhatsApp.",
+        "validation": {
+          "required": "WhatsApp number is required",
+          "invalid": "Please enter a valid 10-digit Indian mobile number",
+          "consentRequired": "You must agree to continue on WhatsApp"
+        }
+      }
+    }
+  },
+  "result": {
+    "heading": "Your Recommended Starting Point",
+    "leadId": "Lead ID",
+    "businessName": "Business Name",
+    "businessCategory": "Business Category",
+    "location": "City / Area",
+    "challenge": "Biggest Challenge",
+    "recommendedService": "Recommended Service",
+    "price": "Price",
+    "reason": "Why This Recommendation",
+    "freeSampleNote": "Based on your request, SBMC may prepare one personalised sample so you can evaluate the quality before deciding whether to continue.",
+    "continueWhatsApp": "Continue on WhatsApp",
+    "editAnswers": "Edit My Answers",
+    "startAgain": "Start Again",
+    "whatsappOpening": "Opening WhatsApp...",
+    "copyMessage": "Copy Message",
+    "copyNumber": "Copy Number",
+    "messageCopied": "Message copied to clipboard!",
+    "numberCopied": "WhatsApp number copied!"
+  },
+  "footer": {
+    "brandMessage": "Every Business Has a Story. Every Story Has Opportunities.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "previewLeads": "Preview Leads",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp",
+    "rights": "All Rights Reserved.",
+    "previewNotice": "Preview mode: these leads exist only in this browser and are not saved to a real database."
+  },
+  "previewLeads": {
+    "heading": "Preview Leads",
+    "notice": "Preview mode: these leads exist only in this browser and are not saved to a real database.",
+    "search": "Search by business name...",
+    "filterCategory": "Filter by category",
+    "filterStatus": "Filter by status",
+    "allCategories": "All Categories",
+    "allStatuses": "All Statuses",
+    "columns": {
+      "leadCode": "Lead ID",
+      "businessName": "Business Name",
+      "category": "Category",
+      "location": "Location",
+      "challenge": "Challenge",
+      "service": "Recommended Service",
+      "phone": "WhatsApp",
+      "status": "Status",
+      "date": "Date",
+      "whatsappClicked": "WhatsApp Clicked",
+      "actions": "Actions"
+    },
+    "actions": {
+      "view": "View",
+      "delete": "Delete",
+      "exportJson": "Export JSON",
+      "exportCsv": "Export CSV",
+      "clearAll": "Clear All Leads"
+    },
+    "statusLabels": {
+      "new": "New",
+      "recommendation_shown": "Recommendation Shown",
+      "whatsapp_started": "WhatsApp Started"
+    },
+    "confirmDelete": "Delete this lead?",
+    "confirmClearAll": "Delete all preview leads? This cannot be undone.",
+    "noLeads": "No preview leads found.",
+    "exportSuccess": "Leads exported successfully!"
+  },
+  "language": {
+    "en": "English",
+    "hi": "हिन्दी"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try Again",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  }
+}

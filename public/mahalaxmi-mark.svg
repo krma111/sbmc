@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220">
+  <g fill="none" stroke="#f3d49a" stroke-width="7">
+    <ellipse cx="210" cy="49" rx="18" ry="34"/>
+    <ellipse cx="210" cy="171" rx="18" ry="34"/>
+    <ellipse cx="149" cy="110" rx="34" ry="18"/>
+    <ellipse cx="271" cy="110" rx="34" ry="18"/>
+    <ellipse cx="167" cy="67" rx="17" ry="31" transform="rotate(-45 167 67)"/>
+    <ellipse cx="253" cy="153" rx="17" ry="31" transform="rotate(-45 253 153)"/>
+    <ellipse cx="253" cy="67" rx="31" ry="17" transform="rotate(-45 253 67)"/>
+    <ellipse cx="167" cy="153" rx="31" ry="17" transform="rotate(-45 167 153)"/>
+    <circle cx="210" cy="110" r="19" fill="#f3d49a" stroke="none"/>
+  </g>
+  <text x="210" y="205" fill="#f3d49a" font-family="Georgia,serif" font-size="26" font-weight="600" text-anchor="middle">MAHALAXMI</text>
+</svg>
