@@ -81,7 +81,7 @@ export function Hero({ locale, t }: HeroProps) {
         {/* Business card panels */}
         <g>
           <rect x="40" y="120" width="190" height="118" rx="14" fill="#FFFFFF" stroke="#E5E5E5" strokeWidth="1.5" />
-          <rect x="40" y="120" width="190" height="40" rx="14" fill="#181A1F" />
+          
           <rect x="40" y="150" width="190" height="10" fill="#181A1F" />
           <circle cx="62" cy="140" r="9" fill="#1CC8F2" />
           <rect x="80" y="132" width="70" height="6" rx="3" fill="#FFFFFF" opacity="0.9" />
