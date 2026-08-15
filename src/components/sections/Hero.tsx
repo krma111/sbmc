@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import { Magnetic } from '@/components/experience/Magnetic';
 
 interface HeroProps {
@@ -67,13 +67,7 @@ export function Hero({ locale, t }: HeroProps) {
   );
 }
 
-function HeroVisual() {
-  return (
-    <div className="relative hidden lg:block" aria-hidden="true">
-      
-      <div className="absolute inset-0 rounded-3xl border border-white/10" />
-      <svg viewBox="0 0 520 460" className="relative mx-auto w-full max-w-[520px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {/* Subtle progress path */}
+
         <path d="M70 380 C 160 330, 180 210, 260 200 S 420 160, 450 90" stroke="#1CC8F2" strokeWidth="3" strokeLinecap="round" strokeDasharray="2 10" opacity="0.7" />
         <path d="M70 380 C 160 330, 180 210, 260 200 S 420 160, 450 90" stroke="#1CC8F2" strokeWidth="1" strokeDasharray="6 6" opacity="0.9" />
 
