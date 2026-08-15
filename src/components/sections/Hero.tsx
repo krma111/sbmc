@@ -61,72 +61,8 @@ export function Hero({ locale, t }: HeroProps) {
           </p>
         </div>
 
-        <HeroVisual />
+        
       </div>
     </section>
-  );
-}
-
-
-        <path d="M70 380 C 160 330, 180 210, 260 200 S 420 160, 450 90" stroke="#1CC8F2" strokeWidth="3" strokeLinecap="round" strokeDasharray="2 10" opacity="0.7" />
-        <path d="M70 380 C 160 330, 180 210, 260 200 S 420 160, 450 90" stroke="#1CC8F2" strokeWidth="1" strokeDasharray="6 6" opacity="0.9" />
-
-        {/* Growth nodes on path */}
-        <circle cx="70" cy="380" r="7" fill="#22C55E" />
-        <circle cx="158" cy="310" r="6" fill="#1CC8F2" />
-        <circle cx="238" cy="228" r="6" fill="#22C55E" />
-        <circle cx="330" cy="196" r="6" fill="#1CC8F2" />
-        <circle cx="450" cy="90" r="8" fill="#22C55E" />
-
-        {/* Business card panels */}
-        <g>
-          <rect x="40" y="120" width="190" height="118" rx="14" fill="#FFFFFF" stroke="#E5E5E5" strokeWidth="1.5" />
-          
-          <rect x="40" y="150" width="190" height="10" fill="#181A1F" />
-          <circle cx="62" cy="140" r="9" fill="#1CC8F2" />
-          <rect x="80" y="132" width="70" height="6" rx="3" fill="#FFFFFF" opacity="0.9" />
-          <rect x="80" y="143" width="50" height="4" rx="2" fill="#FFFFFF" opacity="0.5" />
-          <rect x="60" y="178" width="120" height="8" rx="4" fill="#E5E5E5" />
-          <rect x="60" y="194" width="100" height="8" rx="4" fill="#E5E5E5" />
-          <rect x="60" y="210" width="86" height="8" rx="4" fill="#E5E5E5" />
-          <rect x="160" y="212" width="50" height="18" rx="9" fill="#22C55E" />
-        </g>
-
-        <g>
-          <rect x="290" y="240" width="190" height="118" rx="14" fill="#FFFFFF" stroke="#E5E5E5" strokeWidth="1.5" />
-          <rect x="290" y="240" width="190" height="40" rx="14" fill="#1CC8F2" />
-          <rect x="290" y="270" width="190" height="10" fill="#1CC8F2" />
-          <circle cx="312" cy="260" r="9" fill="#FFFFFF" opacity="0.9" />
-          <rect x="330" y="252" width="70" height="6" rx="3" fill="#181A1F" />
-          <rect x="330" y="263" width="50" height="4" rx="2" fill="#181A1F" opacity="0.5" />
-          <rect x="310" y="298" width="120" height="8" rx="4" fill="#E5E5E5" />
-          <rect x="310" y="314" width="100" height="8" rx="4" fill="#E5E5E5" />
-          <rect x="310" y="330" width="86" height="8" rx="4" fill="#E5E5E5" />
-        </g>
-
-        {/* Opportunity indicator */}
-        <g>
-          <circle cx="300" cy="90" r="34" fill="#22C55E" opacity="0.12" />
-          <circle cx="300" cy="90" r="24" fill="#22C55E" />
-          <path d="M292 90 l6 6 12-14" stroke="#FFFFFF" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
-        </g>
-
-        {/* Brand shapes */}
-        <circle cx="470" cy="400" r="10" fill="#1CC8F2" opacity="0.35" />
-        <circle cx="30" cy="60" r="14" fill="#22C55E" opacity="0.2" />
-        <rect x="440" y="250" width="40" height="40" rx="10" fill="#1CC8F2" opacity="0.15" transform="rotate(12 460 270)" />
-
-        {/* Layered panel */}
-        <g>
-          <rect x="120" y="330" width="170" height="90" rx="12" fill="#181A1F" opacity="0.06" transform="rotate(-3 205 375)" />
-          <rect x="150" y="315" width="170" height="90" rx="12" fill="#FFFFFF" stroke="#E5E5E5" strokeWidth="1.5" />
-          <circle cx="178" cy="345" r="8" fill="#1CC8F2" />
-          <rect x="194" y="340" width="70" height="6" rx="3" fill="#D4D4D4" />
-          <rect x="170" y="360" width="110" height="6" rx="3" fill="#E5E5E5" />
-          <rect x="170" y="374" width="90" height="6" rx="3" fill="#E5E5E5" />
-          <rect x="170" y="388" width="70" height="10" rx="5" fill="#22C55E" />
-        </g>
-      </svg>
-    </div>
   );
 }
