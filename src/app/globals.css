@@ -105,4 +105,12 @@ a {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}@layer utilities {
+  .glass {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background-color: rgba(10, 12, 17, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
 }
+@layer utilities { .glass { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(10, 12, 17, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); } }
