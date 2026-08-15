@@ -21,20 +21,16 @@ export function Hero({ locale, t }: HeroProps) {
         <div className="absolute -bottom-40 -left-40 h-[400px] w-[400px] rounded-full bg-green/10 blur-3xl" />
       </div>
 
-      <div className="container relative grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-2 lg:py-28">
-        <div className="max-w-2xl text-center">
-<p className="inline-flex items-center gap-2 rounded-full border border-cyan/30 bg-cyan/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-cyan">
-<span className="h-1.5 w-1.5 rounded-full bg-cyan" aria-hidden="true" />
-</p>
-
-          <h1 className="mt-5 text-balance text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
+      <div className="container relative flex flex-col items-center justify-center py-20 text-center sm:py-24 lg:py-32">
+        <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
+          <h1 className="text-balance text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
             {t.headline1}
             <span className="mt-1 block text-cyan">{t.headline2}</span>
           </h1>
 
-          <p className="mt-5 max-w-xl text-base leading-7 text-neutral-300 sm:text-lg">{t.supportingCopy}</p>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-neutral-300 sm:text-lg">{t.supportingCopy}</p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Magnetic>
               <Link
                 href={`/${locale}/business-check`}
@@ -56,12 +52,10 @@ export function Hero({ locale, t }: HeroProps) {
             </Magnetic>
           </div>
 
-          <p className="mt-5 flex items-center gap-2 text-xs font-medium text-neutral-400">
+          <p className="mx-auto mt-5 flex items-center justify-center gap-2 text-xs font-medium text-neutral-400">
             {t.trustLine}
           </p>
         </div>
-
-        
       </div>
     </section>
   );
