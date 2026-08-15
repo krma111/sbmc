@@ -57,10 +57,6 @@ export function Hero({ locale, t }: HeroProps) {
           </div>
 
           <p className="mt-5 flex items-center gap-2 text-xs font-medium text-neutral-400">
-            <svg className="h-4 w-4 text-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10" />
-              <path d="m8.5 12.5 2.5 2.5 5-5.5" />
-            </svg>
             {t.trustLine}
           </p>
         </div>
