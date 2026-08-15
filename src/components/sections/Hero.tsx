@@ -22,11 +22,10 @@ export function Hero({ locale, t }: HeroProps) {
       </div>
 
       <div className="container relative grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-2 lg:py-28">
-        <div className="max-w-2xl">
-          <p className="inline-flex items-center gap-2 rounded-full border border-cyan/30 bg-cyan/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-cyan">
-            <span className="h-1.5 w-1.5 rounded-full bg-cyan" aria-hidden="true" />
-            {locale === 'hi' ? 'प्रयागराज • AI-पावर्ड ग्रोथ' : 'Prayagraj • AI-Powered Growth'}
-          </p>
+        <div className="max-w-2xl text-center">
+<p className="inline-flex items-center gap-2 rounded-full border border-cyan/30 bg-cyan/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-cyan">
+<span className="h-1.5 w-1.5 rounded-full bg-cyan" aria-hidden="true" />
+</p>
 
           <h1 className="mt-5 text-balance text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
             {t.headline1}
@@ -75,7 +74,7 @@ export function Hero({ locale, t }: HeroProps) {
 function HeroVisual() {
   return (
     <div className="relative hidden lg:block" aria-hidden="true">
-      <div className="absolute inset-0 rounded-3xl bg-white/[0.03] backdrop-blur-[2px]" />
+      
       <div className="absolute inset-0 rounded-3xl border border-white/10" />
       <svg viewBox="0 0 520 460" className="relative mx-auto w-full max-w-[520px]" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* Subtle progress path */}
