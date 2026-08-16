@@ -33,7 +33,7 @@ export function MethodSection({ t }: MethodSectionProps) {
           {t.steps.map((step, i) => (
             <article
               key={step.title}
-              className="relative rounded-xl border border-white/15 bg-white/[0.05] p-6 shadow-sm transition-shadow hover:shadow-md"
+              className="glass relative rounded-xl border border-white/15 p-6 shadow-sm transition-shadow hover:shadow-md"
             >
               <div className="flex items-center justify-between">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-charcoal text-cyan">

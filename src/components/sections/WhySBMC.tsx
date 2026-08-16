@@ -32,7 +32,7 @@ export function WhySBMC({ t }: WhySBMCProps) {
         <SectionHeading eyebrow="Why SBMC" title={t.heading} />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {t.cards.map((card, i) => (
-            <article key={card.title} className="rounded-xl border border-white/15 bg-white/[0.05] p-6 shadow-sm">
+            <article key={card.title} className="glass rounded-xl border border-white/15 p-6 shadow-sm">
               <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-charcoal text-cyan">{icons[i]}</div>
               <h3 className="mt-4 text-base font-bold tracking-tight text-white">{card.title}</h3>
               <p className="mt-2 text-sm leading-6 text-neutral-300">{card.description}</p>

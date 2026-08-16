@@ -130,7 +130,7 @@ export function ResultScreen({ locale, lead, t, onEdit, onRestart }: ResultScree
 
   return (
     <div className="mx-auto w-full max-w-2xl">
-      <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm">
+      <div className="glass-light overflow-hidden rounded-2xl shadow-sm">
         <div className="border-b-4 border-green bg-charcoal p-6 sm:p-8">
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-green">
             <svg className="mr-1.5 inline h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

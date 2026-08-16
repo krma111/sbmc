@@ -19,7 +19,7 @@ export function ProblemsSection({ locale, t }: ProblemsSectionProps) {
           {t.cards.map((card) => (
             <article
               key={card.id}
-              className="group flex flex-col rounded-xl border border-white/15 bg-white/[0.05] p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:border-cyan/40 hover:shadow-md"
+              className="glass group flex flex-col rounded-xl border border-white/15 p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:border-cyan/40 hover:shadow-md"
             >
               <div className="flex items-start gap-3">
                 <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10 text-white transition-colors group-hover:bg-cyan/10 group-hover:text-cyan" aria-hidden="true">

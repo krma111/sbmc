@@ -112,7 +112,7 @@ export default async function TermsPage({
 
         <div className="mt-8 space-y-6">
           {sections.map((section) => (
-            <section key={section.title} className="rounded-xl border border-neutral-200 bg-white p-6">
+            <section key={section.title} className="glass-light rounded-xl p-6">
               <h2 className="text-lg font-bold tracking-tight text-charcoal">{section.title}</h2>
               <p className="mt-3 text-sm leading-6 text-neutral-500">{section.body}</p>
             </section>

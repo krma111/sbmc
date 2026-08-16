@@ -19,7 +19,7 @@ export function FAQSection({ t, faqs }: FAQSectionProps) {
       <div className="container max-w-4xl">
         <SectionHeading eyebrow="FAQ" title={t.heading} />
 
-        <div className="mt-10 divide-y divide-neutral-200 rounded-xl border border-white/15 bg-white/[0.05] shadow-sm">
+        <div className="glass mt-10 divide-y divide-neutral-200 rounded-xl border border-white/15 shadow-sm">
           {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
             return (

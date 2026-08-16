@@ -279,7 +279,7 @@ export function BusinessCheckForm({ locale, t, resultT }: BusinessCheckFormProps
 
   return (
     <div className="mx-auto w-full max-w-2xl">
-      <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-8">
+      <div className="glass-light overflow-hidden rounded-2xl p-6 shadow-sm sm:p-8">
         <div className="flex items-center justify-between gap-4">
           <p className="text-sm font-bold uppercase tracking-[0.14em] text-neutral-400" aria-live="polite">
             {t.progress.replace('{{current}}', String(currentStep))}

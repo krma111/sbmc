@@ -5,7 +5,7 @@ import { TiltCard } from '@/components/experience/TiltCard';
 
 export function Card({ className, children }: { className?: string; children: React.ReactNode }) {
   return (
-    <TiltCard className={cn('rounded-xl border border-white/10 bg-white/[0.05] p-6 backdrop-blur-[2px]', className)}>
+    <TiltCard className={cn('glass rounded-xl border border-white/10 p-6', className)}>
       {children}
     </TiltCard>
   );

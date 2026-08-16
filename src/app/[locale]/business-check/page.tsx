@@ -52,7 +52,7 @@ export default async function BusinessCheckPage({
           <BusinessCheckForm locale={locale} t={t.form} resultT={t.result} />
         </div>
 
-        <div className="mx-auto mt-10 max-w-2xl rounded-xl border border-neutral-200 bg-white p-5 text-xs leading-5 text-neutral-400">
+        <div className="glass-light mx-auto mt-10 max-w-2xl rounded-xl p-5 text-xs leading-5 text-neutral-500">
           {locale === 'hi'
             ? 'प्रीव्यू नोट: यह एक प्रीव्यू वेबसाइट है। आपकी जानकारी केवल आपके ब्राउज़र (localStorage) में सेव होती है और यह सुरक्षित सर्वर स्टोरेज नहीं है। असली लॉन्च से पहले इसे सुरक्षित बैकएंड से बदला जाएगा।'
             : 'Preview note: This is a preview website. Your information is stored only in this browser (localStorage) and is not secure server storage. A secure backend will replace this before production.'}

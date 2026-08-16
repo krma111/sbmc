@@ -26,7 +26,7 @@ export function WorkExamplesSection({ locale, t }: WorkExamplesSectionProps) {
           {t.categories.map((category, i) => (
             <article
               key={category}
-              className="group flex min-h-[160px] flex-col justify-between rounded-xl border-2 border-dashed border-white/15 bg-white/[0.03]/60 p-6 transition-colors hover:border-cyan/50 hover:bg-cyan/5"
+              className="glass group flex min-h-[160px] flex-col justify-between rounded-xl border-2 border-dashed border-white/15 p-6 transition-colors hover:border-cyan/50 hover:bg-cyan/5"
             >
               <span className="text-xs font-bold uppercase tracking-wider text-neutral-400">
                 {locale === 'hi' ? 'à¤œà¤²à¥à¤¦ à¤† à¤°à¤¹à¤¾ à¤¹à¥ˆ' : 'Coming soon'} â€” {String(i + 1).padStart(2, '0')}

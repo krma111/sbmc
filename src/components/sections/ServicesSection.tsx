@@ -35,7 +35,7 @@ export function ServicesSection({ t }: ServicesSectionProps) {
                 {getServicesByCategory(key).map((service) => (
                   <article
                     key={service.id}
-                    className={`flex flex-col rounded-xl border-2 bg-white/[0.05] p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md ${accent}`}
+                    className={`glass flex flex-col rounded-xl border-2 p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md ${accent}`}
                   >
                     <div className="flex items-start justify-between gap-4">
                       <h4 className="text-base font-bold leading-6 tracking-tight text-white">{service.name}</h4>

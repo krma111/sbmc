@@ -22,7 +22,7 @@ export function BusinessTypesSection({ t }: BusinessTypesSectionProps) {
           {primary.map((cat) => (
             <article
               key={cat.id}
-              className="flex flex-col rounded-xl border border-white/15 bg-white/[0.05] p-6 shadow-sm transition-shadow hover:shadow-md"
+              className="glass flex flex-col rounded-xl border border-white/15 p-6 shadow-sm transition-shadow hover:shadow-md"
             >
               <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-cyan/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-cyan">
                 <span className="h-1.5 w-1.5 rounded-full bg-cyan" aria-hidden="true" />
@@ -34,7 +34,7 @@ export function BusinessTypesSection({ t }: BusinessTypesSectionProps) {
           ))}
         </div>
 
-        <div className="mt-8 rounded-xl border border-white/15 bg-white/[0.05] p-6">
+        <div className="glass mt-8 rounded-xl border border-white/15 p-6">
           <h3 className="text-sm font-bold uppercase tracking-[0.14em] text-neutral-400">{t.secondary}</h3>
           <ul className="mt-4 grid gap-x-6 gap-y-2.5 sm:grid-cols-2 lg:grid-cols-3">
             {secondary.map((cat) => (
