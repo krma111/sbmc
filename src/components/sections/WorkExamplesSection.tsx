@@ -10,7 +10,7 @@ interface WorkExamplesSectionProps {
 
 export function WorkExamplesSection({ locale, t }: WorkExamplesSectionProps) {
   return (
-    <section className="py-16 sm:py-24">
+    <section className="ambient-section py-16 sm:py-24">
       <div className="container">
         <SectionHeading
           eyebrow="Portfolio"

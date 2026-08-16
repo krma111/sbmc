@@ -27,7 +27,7 @@ export function WhySBMC({ t }: WhySBMCProps) {
   ];
 
   return (
-    <section className="border-t border-white/10 bg-white/[0.03] py-16 sm:py-24">
+    <section className="ambient-section border-t border-white/10 bg-white/[0.03] py-16 sm:py-24">
       <div className="container">
         <SectionHeading eyebrow="Why SBMC" title={t.heading} />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

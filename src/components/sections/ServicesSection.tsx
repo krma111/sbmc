@@ -17,7 +17,7 @@ const categoryMeta = [
 
 export function ServicesSection({ t }: ServicesSectionProps) {
   return (
-    <section id="services" className="scroll-mt-20 border-t border-white/10 py-16 sm:py-24">
+    <section id="services" className="ambient-section scroll-mt-20 border-t border-white/10 py-16 sm:py-24">
       <div className="container">
         <SectionHeading eyebrow="Services & Pricing" title={t.heading} description={t.pricingNote} />
 

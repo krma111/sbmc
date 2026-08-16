@@ -14,7 +14,7 @@ export function BusinessTypesSection({ t }: BusinessTypesSectionProps) {
   const secondary = businessCategories.filter((c) => !c.isPrimary);
 
   return (
-    <section id="for-your-business" className="scroll-mt-20 border-t border-white/10 bg-white/[0.03] py-16 sm:py-24">
+    <section id="for-your-business" className="ambient-section scroll-mt-20 border-t border-white/10 bg-white/[0.03] py-16 sm:py-24">
       <div className="container">
         <SectionHeading eyebrow="Industries" title={t.heading} />
 

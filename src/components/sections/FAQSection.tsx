@@ -15,7 +15,7 @@ export function FAQSection({ t, faqs }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="scroll-mt-20 py-16 sm:py-24">
+    <section id="faq" className="ambient-section scroll-mt-20 py-16 sm:py-24">
       <div className="container max-w-4xl">
         <SectionHeading eyebrow="FAQ" title={t.heading} />
 

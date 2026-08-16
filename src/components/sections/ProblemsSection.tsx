@@ -11,7 +11,7 @@ interface ProblemsSectionProps {
 
 export function ProblemsSection({ locale, t }: ProblemsSectionProps) {
   return (
-    <section className="py-16 sm:py-24">
+    <section className="ambient-section py-16 sm:py-24">
       <div className="container">
         <SectionHeading eyebrow="Problem First" title={t.heading} />
 

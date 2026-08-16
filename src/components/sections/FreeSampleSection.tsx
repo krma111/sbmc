@@ -13,7 +13,7 @@ interface FreeSampleSectionProps {
 
 export function FreeSampleSection({ locale, t }: FreeSampleSectionProps) {
   return (
-    <section className="border-t border-white/10 bg-white/[0.03] py-16 sm:py-20">
+    <section className="ambient-section border-t border-white/10 bg-white/[0.03] py-16 sm:py-20">
       <div className="container">
         <div className="glass mx-auto max-w-3xl rounded-2xl border border-white/15 p-8 shadow-sm sm:p-10">
           <SectionHeading eyebrow="Free Sample" title={t.heading} align="left" />

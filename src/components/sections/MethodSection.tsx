@@ -26,7 +26,7 @@ export function MethodSection({ t }: MethodSectionProps) {
   ];
 
   return (
-    <section id="how-it-works" className="scroll-mt-20 py-16 sm:py-24">
+    <section id="how-it-works" className="ambient-section scroll-mt-20 py-16 sm:py-24">
       <div className="container">
         <SectionHeading eyebrow="The SBMC Method" title={t.heading} />
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
