@@ -28,24 +28,37 @@ export function LanguageToggle({ locale, pathname = '' }: LanguageToggleProps) {
     router.push(target || `/${other}`);
   };
 
+  const isEn = locale === 'en';
+
   return (
     <button
       type="button"
       onClick={switchLanguage}
-      className="inline-flex min-h-10 items-center gap-1.5 rounded-lg border border-neutral-200 bg-white px-3 text-sm font-semibold text-charcoal transition-colors hover:border-cyan hover:text-cyan focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan"
-      aria-label={locale === 'en' ? 'Switch to Hindi' : 'Switch to English'}
+      aria-label={isEn ? 'Switch to Hindi' : 'Switch to English'}
+      className="group relative inline-flex h-10 items-center rounded-full border border-white/20 bg-white/5 p-1 text-xs font-bold backdrop-blur-sm transition-colors hover:border-cyan/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan"
     >
-      {locale === 'en' ? (
-        <>
-          <span aria-hidden="true">हि</span>
-          <span className="hidden sm:inline">हिन्दी</span>
-        </>
-      ) : (
-        <>
-          <span aria-hidden="true">EN</span>
-          <span className="hidden sm:inline">English</span>
-        </>
-      )}
+      <span
+        className={`pointer-events-none absolute inset-y-1 w-[46px] rounded-full bg-cyan shadow-md shadow-cyan/30 transition-transform duration-300 ease-out ${
+          isEn ? 'left-1' : 'translate-x-[50px]'
+        }`}
+        aria-hidden="true"
+      />
+      <span
+        className={`relative z-10 flex h-8 w-[46px] items-center justify-center rounded-full transition-colors duration-300 ${
+          isEn ? 'text-charcoal' : 'text-neutral-400 group-hover:text-white'
+        }`}
+        aria-hidden="true"
+      >
+        EN
+      </span>
+      <span
+        className={`relative z-10 flex h-8 w-[50px] items-center justify-center rounded-full transition-colors duration-300 ${
+          isEn ? 'text-neutral-400 group-hover:text-white' : 'text-charcoal'
+        }`}
+        aria-hidden="true"
+      >
+        हि
+      </span>
     </button>
   );
 }
