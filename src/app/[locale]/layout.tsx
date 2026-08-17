@@ -1,5 +1,6 @@
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { Experience3DGate } from '@/components/experience/Experience3DGate';
 import { getTranslations, type Locale } from '@/lib/translations/getTranslations';
 import { notFound } from 'next/navigation';
 
@@ -30,8 +31,9 @@ export default async function LocaleLayout({
 
   return (
     <>
+      <Experience3DGate />
       <Header locale={locale} t={t} />
-      <main className="flex-1">{children}</main>
+      <main className="relative z-10 flex-1 bg-[#0A0C11]">{children}</main>
       <Footer locale={locale} t={t} />
     </>
   );

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Experience3DGate } from '@/components/experience/Experience3DGate';
 import { Hero } from '@/components/sections/Hero';
 import { PositioningSection } from '@/components/sections/PositioningSection';
 import { MethodSection } from '@/components/sections/MethodSection';
@@ -52,7 +51,6 @@ export default async function HomePage({
 
   return (
     <div className="relative min-h-screen overflow-clip bg-[#0A0C11]">
-      <Experience3DGate />
       <main className="relative z-10">
         <Hero locale={locale} t={t.hero} />
         <PositioningSection t={t.positioning} />
