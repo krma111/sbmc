@@ -1,4 +1,4 @@
-﻿import { SectionHeading } from '@/components/ui/Card';
+import { SectionHeading } from '@/components/ui/Card';
 
 interface WorkExamplesSectionProps {
   locale: 'en' | 'hi';
@@ -17,7 +17,7 @@ export function WorkExamplesSection({ locale, t }: WorkExamplesSectionProps) {
           title={t.heading}
           description={
             locale === 'hi'
-              ? 'à¤¯à¤¹à¤¾à¤ SBMC à¤•à¥‡ à¤šà¥à¤¨à¥‡ à¤—à¤ à¤µà¤¾à¤¸à¥à¤¤à¤µà¤¿à¤• à¤¡à¤¿à¤œà¤¼à¤¾à¤‡à¤¨ à¤”à¤° à¤…à¤¨à¥à¤®à¥‹à¤¦à¤¿à¤¤ à¤¸à¥ˆà¤‚à¤ªà¤² à¤¦à¤¿à¤–à¤¾à¤ à¤œà¤¾à¤¤à¥‡ à¤¹à¥ˆà¤‚à¥¤'
+              ? 'यहाँ SBMC के चुने गए वास्तविक डिज़ाइन और अनुमोदित सैंपल दिखाए जाते हैं।'
               : 'Real SBMC designs and approved samples are shown here.'
           }
         />
@@ -29,12 +29,12 @@ export function WorkExamplesSection({ locale, t }: WorkExamplesSectionProps) {
               className="glass group flex min-h-[160px] flex-col justify-between rounded-xl border-2 border-dashed border-white/15 p-6 transition-colors hover:border-cyan/50 hover:bg-cyan/5"
             >
               <span className="text-xs font-bold uppercase tracking-wider text-neutral-400">
-                {locale === 'hi' ? 'à¤œà¤²à¥à¤¦ à¤† à¤°à¤¹à¤¾ à¤¹à¥ˆ' : 'Coming soon'} â€” {String(i + 1).padStart(2, '0')}
+                {locale === 'hi' ? 'जल्द आ रहा है' : 'Coming soon'} — {String(i + 1).padStart(2, '0')}
               </span>
               <h3 className="mt-4 text-lg font-bold tracking-tight text-white">{category}</h3>
               <p className="mt-2 text-xs leading-5 text-neutral-400">
                 {locale === 'hi'
-                  ? 'à¤µà¤¾à¤¸à¥à¤¤à¤µà¤¿à¤• SBMC à¤•à¥à¤°à¤¿à¤à¤Ÿà¤¿à¤µ à¤¯à¤¹à¤¾à¤ à¤œà¥‹à¤¡à¤¼à¥‡ à¤œà¤¾à¤à¤à¤—à¥‡à¥¤'
+                  ? 'वास्तविक SBMC क्रिएटिव यहाँ जोड़े जाएँगे।'
                   : 'Real SBMC creatives will be added here.'}
               </p>
             </article>

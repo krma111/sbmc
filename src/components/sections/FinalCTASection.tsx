@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 
 interface FinalCTASectionProps {
   locale: 'en' | 'hi';
@@ -15,7 +15,7 @@ export function FinalCTASection({ locale, t }: FinalCTASectionProps) {
       <div className="container">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-cyan">
-            {locale === 'hi' ? 'à¤®à¥à¤«à¤¼à¥à¤¤ à¤¬à¤¿à¤œà¤¼à¤¨à¥‡à¤¸ à¤šà¥‡à¤•' : 'Free Business Check'}
+            {locale === 'hi' ? 'मुफ़्त बिज़नेस चेक' : 'Free Business Check'}
           </p>
           <h2 className="mt-4 text-balance text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">
             {t.heading}

@@ -1,4 +1,4 @@
-﻿import { SectionHeading } from '@/components/ui/Card';
+import { SectionHeading } from '@/components/ui/Card';
 import Link from 'next/link';
 
 interface ProblemsSectionProps {
@@ -31,7 +31,7 @@ export function ProblemsSection({ locale, t }: ProblemsSectionProps) {
               </div>
               <div className="mt-4 flex items-center justify-between gap-3 border-t border-white/10 pt-4">
                 <p className="text-xs font-semibold text-neutral-400">
-                  {locale === 'hi' ? 'à¤¸à¤‚à¤­à¤¾à¤µà¤¿à¤¤ à¤¶à¥à¤°à¥à¤†à¤¤:' : 'Possible start:'}
+                  {locale === 'hi' ? 'संभावित शुरुआत:' : 'Possible start:'}
                 </p>
                 <p className="text-right text-sm font-bold text-green">{card.likelySolution}</p>
               </div>
@@ -44,7 +44,7 @@ export function ProblemsSection({ locale, t }: ProblemsSectionProps) {
             href={`/${locale}/business-check`}
             className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-7 text-sm font-bold text-charcoal shadow-md transition-colors hover:bg-neutral-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan"
           >
-            {locale === 'hi' ? 'à¤®à¥à¤«à¤¼à¥à¤¤ à¤¬à¤¿à¤œà¤¼à¤¨à¥‡à¤¸ à¤šà¥‡à¤• à¤¶à¥à¤°à¥‚ à¤•à¤°à¥‡à¤‚' : 'Start Your Free Business Check'}
+            {locale === 'hi' ? 'मुफ़्त बिज़नेस चेक शुरू करें' : 'Start Your Free Business Check'}
           </Link>
         </div>
       </div>

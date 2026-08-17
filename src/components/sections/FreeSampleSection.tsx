@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import { SectionHeading } from '@/components/ui/Card';
 
 interface FreeSampleSectionProps {
@@ -19,7 +19,7 @@ export function FreeSampleSection({ locale, t }: FreeSampleSectionProps) {
           <SectionHeading eyebrow="Free Sample" title={t.heading} align="left" />
           <p className="mt-5 text-base leading-7 text-neutral-300">{t.copy}</p>
           <p className="mt-4 rounded-lg border border-white/10 bg-white/[0.03] p-4 text-sm leading-6 text-neutral-300">
-            <strong className="text-white">{locale === 'hi' ? 'à¤¸à¥à¤ªà¤·à¥à¤Ÿà¥€à¤•à¤°à¤£: ' : 'Clarification: '}</strong>
+            <strong className="text-white">{locale === 'hi' ? 'स्पष्टीकरण: ' : 'Clarification: '}</strong>
             {t.clarification}
           </p>
           <Link

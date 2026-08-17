@@ -1,4 +1,4 @@
-﻿import { SectionHeading } from '@/components/ui/Card';
+import { SectionHeading } from '@/components/ui/Card';
 import { services, getServicesByCategory } from '@/content/services';
 
 interface ServicesSectionProps {
@@ -40,7 +40,7 @@ export function ServicesSection({ t }: ServicesSectionProps) {
                     <div className="flex items-start justify-between gap-4">
                       <h4 className="text-base font-bold leading-6 tracking-tight text-white">{service.name}</h4>
                       <p className="shrink-0 text-xl font-extrabold tracking-tight text-white">
-                        <span className="align-top text-xs font-bold text-neutral-400">â‚¹</span>
+                        <span className="align-top text-xs font-bold text-neutral-400">₹</span>
                         {service.price.toLocaleString('en-IN')}
                       </p>
                     </div>
