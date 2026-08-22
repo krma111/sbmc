@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -55,7 +55,9 @@ function Core() {
   const ico = useRef<THREE.Mesh>(null);
   const icoInner = useRef<THREE.Mesh>(null);
   const glow = useRef<THREE.Mesh>(null);
-  const ring = useRef<THREE.Mesh>(null);
+  const ring1 = useRef<THREE.Mesh>(null);
+  const ring2 = useRef<THREE.Mesh>(null);
+  const coreLight = useRef<THREE.PointLight>(null);
 
   useFrame((state, dt) => {
     const t = state.clock.elapsedTime;
@@ -68,14 +70,21 @@ function Core() {
       icoInner.current.rotation.y -= dt * 0.22;
     }
     if (glow.current) {
-      const s = 1 + Math.sin(t * 1.4) * 0.08;
+      const s = 1 + Math.sin(t * 1.4) * 0.12;
       glow.current.scale.setScalar(s);
       (glow.current.material as THREE.MeshBasicMaterial).opacity =
-        0.06 + Math.sin(t * 0.8) * 0.025;
+        0.08 + Math.sin(t * 0.8) * 0.04;
     }
-    if (ring.current) {
-      ring.current.rotation.z += dt * 0.08;
-      ring.current.rotation.x = Math.sin(t * 0.3) * 0.2;
+    if (ring1.current) {
+      ring1.current.rotation.z += dt * 0.1;
+      ring1.current.rotation.x = Math.sin(t * 0.3) * 0.25;
+    }
+    if (ring2.current) {
+      ring2.current.rotation.z -= dt * 0.07;
+      ring2.current.rotation.y = Math.cos(t * 0.25) * 0.3;
+    }
+    if (coreLight.current) {
+      coreLight.current.intensity = 80 + Math.sin(t * 1.2) * 30;
     }
   });
 
@@ -83,32 +92,43 @@ function Core() {
     <group>
       <mesh ref={ico}>
         <icosahedronGeometry args={[1.6, 1]} />
-        <meshBasicMaterial color={CYAN} wireframe transparent opacity={0.55} />
+        <meshBasicMaterial color={CYAN} wireframe transparent opacity={0.6} />
       </mesh>
       <mesh ref={icoInner}>
         <icosahedronGeometry args={[0.9, 0]} />
-        <meshBasicMaterial color={GREEN} wireframe transparent opacity={0.35} />
+        <meshBasicMaterial color={GREEN} wireframe transparent opacity={0.4} />
       </mesh>
-      <mesh ref={ring}>
-        <torusGeometry args={[2.2, 0.025, 16, 64]} />
+      <mesh ref={ring1}>
+        <torusGeometry args={[2.2, 0.03, 16, 64]} />
         <meshBasicMaterial
           color={CYAN}
           transparent
-          opacity={0.4}
+          opacity={0.5}
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
+        />
+      </mesh>
+      <mesh ref={ring2}>
+        <torusGeometry args={[2.6, 0.02, 16, 64]} />
+        <meshBasicMaterial
+          color={GREEN}
+          transparent
+          opacity={0.35}
           blending={THREE.AdditiveBlending}
           depthWrite={false}
         />
       </mesh>
       <mesh ref={glow}>
-        <sphereGeometry args={[2.8, 32, 32]} />
+        <sphereGeometry args={[3.2, 32, 32]} />
         <meshBasicMaterial
           color={GREEN}
           transparent
-          opacity={0.07}
+          opacity={0.08}
           blending={THREE.AdditiveBlending}
           depthWrite={false}
         />
       </mesh>
+      <pointLight ref={coreLight} position={[0, 0, 0]} intensity={80} distance={20} color={CYAN} />
     </group>
   );
 }
@@ -145,7 +165,7 @@ function ChapterObjects() {
       group.traverse((child) => {
         if ((child as THREE.Mesh).isMesh) {
           const m = (child as THREE.Mesh).material as THREE.MeshBasicMaterial;
-          m.opacity = target * 0.85;
+          m.opacity = target * 0.9;
           m.transparent = true;
         }
       });
@@ -206,7 +226,7 @@ function ParticleField() {
   const points = useRef<THREE.Points>(null);
   const linesRef = useRef<THREE.LineSegments>(null);
   const { positions, colors, sizes } = useMemo(() => {
-    const count = 1600;
+    const count = 2200;
     const pos = new Float32Array(count * 3);
     const col = new Float32Array(count * 3);
     const size = new Float32Array(count);
@@ -232,37 +252,36 @@ function ParticleField() {
   useFrame((state, dt) => {
     const t = state.clock.elapsedTime;
     if (points.current) {
-      points.current.rotation.y += dt * 0.018;
-      points.current.rotation.x += dt * 0.004;
+      points.current.rotation.y += dt * 0.022;
+      points.current.rotation.x += dt * 0.006;
       const s = points.current.material as THREE.PointsMaterial;
-      s.size = 0.09 + Math.sin(t * 0.5) * 0.015;
+      s.size = 0.11 + Math.sin(t * 0.5) * 0.02;
     }
     if (linesRef.current) {
-      linesRef.current.rotation.y += dt * 0.018;
-      linesRef.current.rotation.x += dt * 0.004;
-      linesRef.current.rotation.z += dt * 0.003;
+      linesRef.current.rotation.y += dt * 0.022;
+      linesRef.current.rotation.x += dt * 0.006;
+      linesRef.current.rotation.z += dt * 0.004;
     }
   });
 
   const lineGeometry = useMemo(() => {
-    const count = 1600;
-    const posAttr = new THREE.BufferAttribute(positions, 3);
+    const count = 2200;
     const linePositions: number[] = [];
     const lineColors: number[] = [];
-    const maxDist = 2.8;
+    const maxDist = 3.2;
     const cyanColor = new THREE.Color(CYAN);
     const greenColor = new THREE.Color(GREEN);
     let lineCount = 0;
 
-    for (let i = 0; i < Math.min(count, 300); i++) {
+    for (let i = 0; i < Math.min(count, 400); i++) {
       const ix = i * 3;
       const x1 = positions[ix], y1 = positions[ix + 1], z1 = positions[ix + 2];
-      for (let j = i + 1; j < Math.min(count, 300); j++) {
+      for (let j = i + 1; j < Math.min(count, 400); j++) {
         const jx = j * 3;
         const x2 = positions[jx], y2 = positions[jx + 1], z2 = positions[jx + 2];
         const dx = x1 - x2, dy = y1 - y2, dz = z1 - z2;
         const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
-        if (dist < maxDist && lineCount < 800) {
+        if (dist < maxDist && lineCount < 1200) {
           linePositions.push(x1, y1, z1, x2, y2, z2);
           const fade = 1 - dist / maxDist;
           const c = lineCount % 3 === 0 ? greenColor : cyanColor;
@@ -288,10 +307,10 @@ function ParticleField() {
           <bufferAttribute attach="attributes-size" args={[sizes, 1]} />
         </bufferGeometry>
         <pointsMaterial
-          size={0.09}
+          size={0.11}
           vertexColors
           transparent
-          opacity={0.75}
+          opacity={0.8}
           sizeAttenuation
           depthWrite={false}
           blending={THREE.AdditiveBlending}
@@ -301,7 +320,7 @@ function ParticleField() {
         <lineBasicMaterial
           vertexColors
           transparent
-          opacity={0.3}
+          opacity={0.35}
           blending={THREE.AdditiveBlending}
           depthWrite={false}
         />
