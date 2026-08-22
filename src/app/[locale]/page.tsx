@@ -50,7 +50,7 @@ export default async function HomePage({
   }));
 
   return (
-    <div className="relative min-h-screen overflow-clip bg-[#0A0C11]">
+    <div className="relative min-h-screen overflow-clip">
       <main className="relative z-10">
         <Hero locale={locale} t={t.hero} />
         <PositioningSection t={t.positioning} />
