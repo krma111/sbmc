@@ -53,25 +53,54 @@ function CameraRig() {
 
 function Core() {
   const ico = useRef<THREE.Mesh>(null);
+  const icoInner = useRef<THREE.Mesh>(null);
   const glow = useRef<THREE.Mesh>(null);
+  const ring = useRef<THREE.Mesh>(null);
+
   useFrame((state, dt) => {
+    const t = state.clock.elapsedTime;
     if (ico.current) {
       ico.current.rotation.x += dt * 0.12;
       ico.current.rotation.y += dt * 0.16;
     }
+    if (icoInner.current) {
+      icoInner.current.rotation.x -= dt * 0.18;
+      icoInner.current.rotation.y -= dt * 0.22;
+    }
     if (glow.current) {
-      const s = 1 + Math.sin(state.clock.elapsedTime * 1.4) * 0.08;
+      const s = 1 + Math.sin(t * 1.4) * 0.08;
       glow.current.scale.setScalar(s);
+      (glow.current.material as THREE.MeshBasicMaterial).opacity =
+        0.06 + Math.sin(t * 0.8) * 0.025;
+    }
+    if (ring.current) {
+      ring.current.rotation.z += dt * 0.08;
+      ring.current.rotation.x = Math.sin(t * 0.3) * 0.2;
     }
   });
+
   return (
     <group>
       <mesh ref={ico}>
         <icosahedronGeometry args={[1.6, 1]} />
         <meshBasicMaterial color={CYAN} wireframe transparent opacity={0.55} />
       </mesh>
+      <mesh ref={icoInner}>
+        <icosahedronGeometry args={[0.9, 0]} />
+        <meshBasicMaterial color={GREEN} wireframe transparent opacity={0.35} />
+      </mesh>
+      <mesh ref={ring}>
+        <torusGeometry args={[2.2, 0.025, 16, 64]} />
+        <meshBasicMaterial
+          color={CYAN}
+          transparent
+          opacity={0.4}
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
+        />
+      </mesh>
       <mesh ref={glow}>
-        <sphereGeometry args={[2.4, 24, 24]} />
+        <sphereGeometry args={[2.8, 32, 32]} />
         <meshBasicMaterial
           color={GREEN}
           transparent
@@ -175,6 +204,7 @@ function ChapterObjects() {
 
 function ParticleField() {
   const points = useRef<THREE.Points>(null);
+  const linesRef = useRef<THREE.LineSegments>(null);
   const { positions, colors, sizes } = useMemo(() => {
     const count = 1600;
     const pos = new Float32Array(count * 3);
@@ -199,30 +229,84 @@ function ParticleField() {
     return { positions: pos, colors: col, sizes: size };
   }, []);
 
-  useFrame((_, dt) => {
+  useFrame((state, dt) => {
+    const t = state.clock.elapsedTime;
     if (points.current) {
       points.current.rotation.y += dt * 0.018;
       points.current.rotation.x += dt * 0.004;
+      const s = points.current.material as THREE.PointsMaterial;
+      s.size = 0.09 + Math.sin(t * 0.5) * 0.015;
+    }
+    if (linesRef.current) {
+      linesRef.current.rotation.y += dt * 0.018;
+      linesRef.current.rotation.x += dt * 0.004;
+      linesRef.current.rotation.z += dt * 0.003;
     }
   });
 
+  const lineGeometry = useMemo(() => {
+    const count = 1600;
+    const posAttr = new THREE.BufferAttribute(positions, 3);
+    const linePositions: number[] = [];
+    const lineColors: number[] = [];
+    const maxDist = 2.8;
+    const cyanColor = new THREE.Color(CYAN);
+    const greenColor = new THREE.Color(GREEN);
+    let lineCount = 0;
+
+    for (let i = 0; i < Math.min(count, 300); i++) {
+      const ix = i * 3;
+      const x1 = positions[ix], y1 = positions[ix + 1], z1 = positions[ix + 2];
+      for (let j = i + 1; j < Math.min(count, 300); j++) {
+        const jx = j * 3;
+        const x2 = positions[jx], y2 = positions[jx + 1], z2 = positions[jx + 2];
+        const dx = x1 - x2, dy = y1 - y2, dz = z1 - z2;
+        const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+        if (dist < maxDist && lineCount < 800) {
+          linePositions.push(x1, y1, z1, x2, y2, z2);
+          const fade = 1 - dist / maxDist;
+          const c = lineCount % 3 === 0 ? greenColor : cyanColor;
+          lineColors.push(c.r * fade, c.g * fade, c.b * fade);
+          lineColors.push(c.r * fade, c.g * fade, c.b * fade);
+          lineCount++;
+        }
+      }
+    }
+
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.Float32BufferAttribute(linePositions, 3));
+    geo.setAttribute('color', new THREE.Float32BufferAttribute(lineColors, 3));
+    return geo;
+  }, [positions]);
+
   return (
-    <points ref={points}>
-      <bufferGeometry>
-        <bufferAttribute attach="attributes-position" args={[positions, 3]} />
-        <bufferAttribute attach="attributes-color" args={[colors, 3]} />
-        <bufferAttribute attach="attributes-size" args={[sizes, 1]} />
-      </bufferGeometry>
-      <pointsMaterial
-        size={0.09}
-        vertexColors
-        transparent
-        opacity={0.75}
-        sizeAttenuation
-        depthWrite={false}
-        blending={THREE.AdditiveBlending}
-      />
-    </points>
+    <group>
+      <points ref={points}>
+        <bufferGeometry>
+          <bufferAttribute attach="attributes-position" args={[positions, 3]} />
+          <bufferAttribute attach="attributes-color" args={[colors, 3]} />
+          <bufferAttribute attach="attributes-size" args={[sizes, 1]} />
+        </bufferGeometry>
+        <pointsMaterial
+          size={0.09}
+          vertexColors
+          transparent
+          opacity={0.75}
+          sizeAttenuation
+          depthWrite={false}
+          blending={THREE.AdditiveBlending}
+        />
+      </points>
+      <lineSegments ref={linesRef} geometry={lineGeometry}>
+        <lineBasicMaterial
+          vertexColors
+          transparent
+          opacity={0.3}
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
+        />
+      </lineSegments>
+    </group>
   );
 }
 
